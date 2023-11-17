@@ -67,10 +67,11 @@ footer > a {
 }
 
 .main {
-	flex: 2;
+	/* flex: 2; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	max-width: 800px;
 }
 
 .form-container {
@@ -104,6 +105,7 @@ h3 {
 
 .submit-button {
 	background-color: #596d48;
+	border: none;
 	color: white;
 	width: 20rem;
 	height: 3.5rem;
@@ -116,4 +118,54 @@ h3 {
 
 .login {
 	font-size: 1.4rem;
+}
+
+.form-fields {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.form-fields > p {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.form-fields label {
+	font-size: 1rem;
+	color: #424242;
+}
+
+.form-fields input {
+	width: 80%;
+	height: 2.5rem;
+	appearance: none;
+	border: 1px solid #e5e7eb;
+	border-radius: 4px;
+	padding: 5px 10px;
+}
+
+.form-fields input:focus {
+	outline: none;
+	border: 1px solid blue;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input.error {
+	border: 1px solid red;
+}
+
+label[for="pwd"] {
+	position: relative;
+}
+
+label[for="pwd"]::after {
+	position: absolute;
+	content: "*Passwords do not match";
+	top: 40px;
+	left: 0;
+	color: red;
+	font-size: 0.8rem;
 }

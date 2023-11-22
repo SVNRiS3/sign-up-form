@@ -161,11 +161,25 @@ label[for="pwd"] {
 	position: relative;
 }
 
-.error > label[for="pwd"]::after {
+.error > label[for="pwd"]::before {
 	position: absolute;
 	content: "*Passwords do not match";
 	top: 40px;
 	left: 0;
 	color: red;
 	font-size: 0.8rem;
+}
+
+.form-info {
+	font-size: 1rem;
+	margin-top: 10px;
+	color: #424242;
+}
+
+.form-fields .form-info {
+	flex-direction: row;
+}
+
+.form-info > span {
+	margin-right: 2px;
 }

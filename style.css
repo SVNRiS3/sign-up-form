@@ -153,7 +153,7 @@ h3 {
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-input.error {
+.error > input {
 	border: 1px solid red;
 }
 
@@ -161,7 +161,7 @@ label[for="pwd"] {
 	position: relative;
 }
 
-label[for="pwd"]::after {
+.error > label[for="pwd"]::after {
 	position: absolute;
 	content: "*Passwords do not match";
 	top: 40px;

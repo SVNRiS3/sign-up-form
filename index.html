@@ -73,14 +73,22 @@
 										aria-label="required"
 										>*
 									</span></label
-								><input type="tel" required />
+								><input
+									type="tel"
+									pattern="[0-9]{9}"
+									required
+									placeholder="999999999" />
 							</p>
 							<p class="error">
 								<label for="pwd"
 									>PASSWORD<span aria-label="required"
 										>*
 									</span></label
-								><input type="password" required />
+								><input
+									type="password"
+									pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
+								"
+									required />
 							</p>
 							<p class="error">
 								<label for="pwd_conf"
@@ -90,6 +98,15 @@
 									</span></label
 								><input type="password" required />
 							</p>
+							<div class="pwd-hint">
+								Password should contain:
+								<ul>
+									<li>Uppercase letter</li>
+									<li>Lowercase letter</li>
+									<li>Number/Special character</li>
+									<li>Min. 8 characters</li>
+								</ul>
+							</div>
 							<p class="form-info">
 								<span aria-label="required">* </span>
 								fields are required
